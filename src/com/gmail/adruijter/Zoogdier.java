@@ -7,6 +7,7 @@ public class Zoogdier
 	private short amountOfLegs;
 	private String favoriteFood;
 	private String sound;
+	private short lifeExpectancy;
 		
 	
 	// Properties
@@ -28,7 +29,6 @@ public class Zoogdier
 	{
 		this.amountOfLegs = amountOfLegs;		
 	}
-	
 	public String getFavoriteFood()
 	{
 		return this.favoriteFood;
@@ -37,7 +37,6 @@ public class Zoogdier
 	{
 		this.favoriteFood = favoriteFood;
 	}
-
 	public String getSound()
 	{
 		return this.sound;
@@ -47,21 +46,32 @@ public class Zoogdier
 		this.sound = sound;
 	}
 	
+	public short getLifeExpectancy()
+	{
+		return this.lifeExpectancy;
+	}
+	public void setLifeExpectancy(short lifeExpectancy)
+	{
+		this.lifeExpectancy = lifeExpectancy;
+	}
 	
 	// Constructor
 	public Zoogdier()
 	{
-		this.amountOfLegs = 4;
+		this.amountOfLegs = 2;
 		this.favoriteFood = "Banaan";
 		this.sound = "OehOehAah";
+		this.name = "aap";
+		this.lifeExpectancy = 32;
 	}
 	
-	public Zoogdier(String name, short amountOfLegs, String favoriteFood, String sound)
+	public Zoogdier(String name, short amountOfLegs, String favoriteFood, String sound, short lifeExpectancy)
 	{
 		this.name = name;
 		this.amountOfLegs = amountOfLegs;
 		this.favoriteFood = favoriteFood;
-		this.sound = sound;		
+		this.sound = sound;	
+		this.lifeExpectancy = lifeExpectancy;
 	}	
 	
 	// Methods
@@ -71,7 +81,8 @@ public class Zoogdier
 				   "De naam van het zoogdier is: " + this.getName() + "\r\n" +
 				   "Het aantal benen van dit dier bedraagt: " + this.getAmountOfLegs() + "\r\n" +
 				   "Het lievelingsgerecht van dit dier is: " + this.getFavoriteFood() + "\r\n" +
-				   "Het geluid dat dit dier maakt is: " + this.getSound() + 
+				   "Het geluid dat dit dier maakt is: " + this.getSound() + "\r\n" +
+				   "De levensverwachting van een " + this.name + " is: " + this.getLifeExpectancy() + " jaar" +
 				   "\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n");
 	}
 	
