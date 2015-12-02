@@ -1,49 +1,55 @@
 package com.gmail.adruijter;
 
-public class Zoogdier
+public class Zoogdier 
 {
 	// Fields
-	private String name;
-	private short amountOfLegs;
-	private String favoriteFood;
+	private String nameSpecies;
+	private int amountOfLegs;
 	private String sound;
+	private String favoriteFood;
 	private short lifeExpectancy;
-		
 	
-	// Properties
-	public String getName()
+	
+	// Properties 
+	//getter
+	public String getNameSpecies()
 	{
-		return this.name;
-	}	
-	public void setName(String name)
-	{
-		this.name = name;
+		return this.nameSpecies;
 	}
-	//getter method
-	public short getAmountOfLegs()
+	public void setNameSpecies(String nameSpecies)
+	{
+		this.nameSpecies = nameSpecies;
+	}
+	
+	
+	public int getAmountOfLegs()
 	{
 		return this.amountOfLegs;
+	}
+	//setter
+	public void setAmountOfLegs(int amountOfLegs)
+	{
+		this.amountOfLegs = amountOfLegs;
 	}	
-	//setter method
-	public void setAmountOfLegs(short amountOfLegs)
-	{
-		this.amountOfLegs = amountOfLegs;		
-	}
-	public String getFavoriteFood()
-	{
-		return this.favoriteFood;
-	}
-	public void setFavoriteFood(String favoriteFood)
-	{
-		this.favoriteFood = favoriteFood;
-	}
+	
 	public String getSound()
 	{
-		return this.sound;
+		return this.sound;		
 	}
+	
 	public void setSound(String sound)
 	{
 		this.sound = sound;
+	}
+	
+	public String getFavoriteFood()
+	{
+		return this.favoriteFood;		
+	}
+	
+	public void setFavoriteFood(String favoriteFood)
+	{
+		this.favoriteFood = favoriteFood;
 	}
 	
 	public short getLifeExpectancy()
@@ -58,34 +64,43 @@ public class Zoogdier
 	// Constructor
 	public Zoogdier()
 	{
-		this.amountOfLegs = 2;
+		this.amountOfLegs = 4;
+		this.sound = "OekieBoekieDada";
 		this.favoriteFood = "Banaan";
-		this.sound = "OehOehAah";
-		this.name = "aap";
-		this.lifeExpectancy = 32;
 	}
 	
-	public Zoogdier(String name, short amountOfLegs, String favoriteFood, String sound, short lifeExpectancy)
+	public Zoogdier(int amountOfLegs, String sound, String favoriteFood)
 	{
-		this.name = name;
 		this.amountOfLegs = amountOfLegs;
+		this.sound = sound;
 		this.favoriteFood = favoriteFood;
-		this.sound = sound;	
+		
+	}
+	
+	public Zoogdier(int amountOfLegs, String sound, String favoriteFood, String nameSpecies, short lifeExpectancy )
+	{
+		this.amountOfLegs = amountOfLegs;
+		this.sound = sound;
+		this.favoriteFood = favoriteFood;
+		this.nameSpecies = nameSpecies;	
 		this.lifeExpectancy = lifeExpectancy;
-	}	
+	}
 	
 	// Methods
-	public void Show()
+	public void ShowProps()
 	{
-		System.out.println("\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n" +
-				   "De naam van het zoogdier is: " + this.getName() + "\r\n" +
-				   "Het aantal benen van dit dier bedraagt: " + this.getAmountOfLegs() + "\r\n" +
-				   "Het lievelingsgerecht van dit dier is: " + this.getFavoriteFood() + "\r\n" +
-				   "Het geluid dat dit dier maakt is: " + this.getSound() + "\r\n" +
-				   "De levensverwachting van een " + this.name + " is: " + this.getLifeExpectancy() + " jaar" +
-				   "\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n");
+		System.out.println(String.format("\r\n++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n" +
+										 "Ik ben een: %s \r\n" + 
+										 "Ik heb maar liefst %s benen \r\n" + 
+										 "Ik maak het volgende geluid: %s \r\n" + 
+										 "Mijn lievelingsvoedsel is: %s \r\n" + 
+										 "De levenverwachting van een %s is: %s\r\n" +
+										 "++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n",
+										 this.nameSpecies,
+										 this.amountOfLegs,
+										 this.sound, 
+										 this.favoriteFood,
+										 this.nameSpecies,
+										 this.lifeExpectancy));
 	}
-	
-	
-
 }

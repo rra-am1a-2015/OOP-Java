@@ -1,26 +1,26 @@
 package com.gmail.adruijter;
 
-public class Program {
-
+public class Program 
+{
 	public static void main(String[] args) 
 	{
-		String firstname, infix, lastname;
-		firstname = "Arjan";
-		infix = "de";
-		lastname = "Ruijter";
-		System.out.println("Mijn naam is: " + firstname + " " + infix + " " + lastname);
+		System.out.println("Les 1 Classes in Java");
+		
+		Zoogdier dier, kameel;
 		
 		
-		Zoogdier dier;		
-		dier = new Zoogdier("Olifant", (short)4, "Pinda", "Tetterdetet", (short)70);
-		dier.setAmountOfLegs((short)4);		
-		dier.Show();
+		dier  = new Zoogdier(8, "HeppieHeppieKluckKluck", "Pinda's", "koe", (short)3);
+		dier.setAmountOfLegs(12);
+		dier.ShowProps();
 		
-		Zoogdier kameel = new Zoogdier("Kameel", (short)4, "Hooi", "Mweeeh", (short)50);
-		kameel.Show();
+		kameel = new Zoogdier(4, "Hroeaaahhh", "Hooi", "kameel",(short)50);		
+		kameel.ShowProps();
 		
-		Zoogdier aap;
-		aap = new Zoogdier();
+		Elephant bertje = new Elephant(1.95f, 4, "Retteketet", "Pinda", "Elephant", (short)70);
+		bertje.setSound("Teterdetet");
+		bertje.ShowFields();
+		
+		
 		
 	}
 }
