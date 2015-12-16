@@ -62,12 +62,14 @@ public class Zoogdier
 	}
 	
 	// Constructor
+	/*
 	public Zoogdier()
 	{
 		this.amountOfLegs = 4;
 		this.sound = "OekieBoekieDada";
 		this.favoriteFood = "Banaan";
 	}
+	*/
 	
 	public Zoogdier(int amountOfLegs, String sound, String favoriteFood)
 	{

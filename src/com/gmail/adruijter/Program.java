@@ -20,7 +20,13 @@ public class Program
 		bertje.setSound("Teterdetet");
 		bertje.ShowFields();
 		
+		Whale moby = new Whale(4, 0, "HuuuhHuuuaaaoooh", "Krill", "Walvis", (short)200 );
+		Zoogdier walvis;
+		walvis = moby;
+		moby.ShowProps();
+		//walvis.ShowProps();
 		
-		
+		Zoogdier willy = new Whale(5, 0, "HaHo", "plankton", "Orka", (short)20);
+		willy.ShowProps();
 	}
 }
